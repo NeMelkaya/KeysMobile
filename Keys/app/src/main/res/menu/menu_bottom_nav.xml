@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/actionForm"
+        android:enabled="true"
+        android:title="Мои заявки"
+        android:icon="@drawable/ic_group" />
+    <item
+        android:id="@+id/actionKeys"
+        android:enabled="true"
+        android:title="Мои ключи"
+        android:icon="@drawable/ic_group" />
+    <item
+        android:id="@+id/actionTimetable"
+        android:enabled="true"
+        android:title="Расписание"
+        android:icon="@drawable/ic_chat" />
+    <item
+        android:id="@+id/actionProfile"
+        android:enabled="true"
+        android:title="Профиль"
+        android:icon="@drawable/ic_user" />
+</menu>

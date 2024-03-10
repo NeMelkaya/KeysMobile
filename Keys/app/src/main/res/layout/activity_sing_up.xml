@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/singUp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/firstTV"
+        style="@style/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Добро пожаловать!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/secondTV"
+        style="@style/headingText.24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Регистрация"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/firstTV"
+        app:layout_constraintTop_toBottomOf="@+id/firstTV" />
+
+    <TextView
+        android:id="@+id/loginTV"
+        style="@style/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Почта/Логин"
+        app:layout_constraintBottom_toTopOf="@+id/loginTIL"
+        app:layout_constraintStart_toStartOf="@+id/secondTV" />
+
+    <TextView
+        android:id="@+id/passwordTV"
+        style="@style/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Пароль"
+        app:layout_constraintBottom_toTopOf="@+id/passwordTIL"
+        app:layout_constraintStart_toStartOf="@+id/nameTIL" />
+
+    <TextView
+        android:id="@+id/passwordSecondTV"
+        style="@style/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Повторите пароль"
+        app:layout_constraintBottom_toTopOf="@+id/passwordSecondTIL"
+        app:layout_constraintStart_toStartOf="@+id/passwordTIL" />
+
+    <TextView
+        android:id="@+id/nameProfileTV"
+        style="@style/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Имя"
+        app:layout_constraintBottom_toTopOf="@+id/nameTIL"
+        app:layout_constraintStart_toStartOf="@+id/loginTIL" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="40dp"
+        android:hint="Логин"
+        app:hintTextAppearance="@style/MyHintText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/loginTV"
+        app:layout_constraintTop_toBottomOf="@+id/secondTV">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:hint="Имя"
+        app:layout_constraintEnd_toEndOf="@+id/loginTIL"
+        app:layout_constraintStart_toStartOf="@+id/nameProfileTV"
+        app:layout_constraintTop_toBottomOf="@+id/loginTIL">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:hint="Пароль"
+        app:layout_constraintEnd_toEndOf="@+id/nameTIL"
+        app:layout_constraintStart_toStartOf="@+id/passwordTV"
+        app:layout_constraintTop_toBottomOf="@+id/nameTIL">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordSecondTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:hint="Повторите пароль"
+        app:layout_constraintEnd_toEndOf="@+id/passwordTIL"
+        app:layout_constraintStart_toStartOf="@+id/passwordSecondTV"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTIL">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordSecondText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/loginBtn"
+        style="@style/btn.blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="112dp"
+        android:text="Зарегистрироваться"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/botFirstTV"
+        style="@style/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Есть аккаунт?"
+        app:layout_constraintStart_toStartOf="@+id/loginBtn"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+    <TextView
+        android:id="@+id/botSecondTV"
+        style="@style/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Войти в аккаунт ->"
+        app:layout_constraintBottom_toBottomOf="@+id/botFirstTV"
+        app:layout_constraintStart_toEndOf="@+id/botFirstTV"
+        app:layout_constraintTop_toTopOf="@+id/botFirstTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

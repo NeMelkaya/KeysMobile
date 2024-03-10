@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_item_form"
+    android:paddingStart="10dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="5dp">
+
+
+    <ImageView
+        android:id="@+id/roomTV"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dataText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nameText"
+        app:srcCompat="@drawable/rounded_text_shape" />
+
+    <TextView
+        android:id="@+id/roomNumTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="333"
+        app:layout_constraintBottom_toBottomOf="@+id/roomTV"
+        app:layout_constraintEnd_toEndOf="@+id/roomTV"
+        app:layout_constraintStart_toEndOf="@+id/icRoomTV"
+        app:layout_constraintTop_toTopOf="@+id/roomTV" />
+
+    <ImageView
+        android:id="@+id/icRoomTV"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/roomNumTV"
+        app:layout_constraintStart_toStartOf="@+id/roomTV"
+        app:layout_constraintTop_toTopOf="@+id/roomNumTV"
+        app:srcCompat="@drawable/ic_checkbox" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Встреча одноклассников"
+        app:layout_constraintStart_toEndOf="@+id/roomTV"
+        app:layout_constraintTop_toTopOf="@+id/statusFormBtn" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="10:35 - 12:10"
+        app:layout_constraintStart_toEndOf="@+id/icTimeTV"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+    <TextView
+        android:id="@+id/dataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="24.02.2024"
+        app:layout_constraintStart_toEndOf="@+id/icDataTV"
+        app:layout_constraintTop_toBottomOf="@+id/timeText" />
+
+    <Button
+        android:id="@+id/statusFormBtn"
+        style="@style/btn.transparent.12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="false"
+        android:text="Ожидание"
+        app:icon="@drawable/ic_chat"
+        app:iconGravity="top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/statusKeyBtn"
+        style="@style/btn.transparent.12sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Ключ не в деканате"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/statusFormBtn"
+        app:layout_constraintStart_toStartOf="@+id/statusFormBtn"
+        app:layout_constraintTop_toBottomOf="@+id/statusFormBtn" />
+
+    <ImageView
+        android:id="@+id/icTimeTV"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/timeText"
+        app:layout_constraintStart_toStartOf="@+id/nameText"
+        app:layout_constraintTop_toTopOf="@+id/timeText"
+        app:srcCompat="@drawable/ic_chat" />
+
+    <ImageView
+        android:id="@+id/icDataTV"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dataText"
+        app:layout_constraintStart_toStartOf="@+id/icTimeTV"
+        app:layout_constraintTop_toTopOf="@+id/dataText"
+        app:srcCompat="@drawable/ic_checkbox" />
+</androidx.constraintlayout.widget.ConstraintLayout>
