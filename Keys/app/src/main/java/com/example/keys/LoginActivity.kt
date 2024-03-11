@@ -41,6 +41,8 @@ class LoginActivity: AppCompatActivity(R.layout.activity_login) {
                     intent.putExtra( "LLuser", data.user)
                     Toast.makeText(this@LoginActivity, "token: ${data.token}", Toast.LENGTH_SHORT).show()
                     TokenStore.token = data.token
+                    TokenStore.id = data.user
+                    TokenStore.allToken = "Bearer " + data.token
                     startActivity(intent)
                 }
                 res.onFailure {

@@ -10,15 +10,16 @@ import com.example.keys.my_enum.StatusKey
 
 class FormsAdapter(private val formActionListener: FormActionListener) : RecyclerView.Adapter<FormsAdapter.FormsViewHolder>(){
 
-    var formData: List<Forms> = (1..5).map {
+    var formData: List<Forms> = (1..1).map {
         Forms(
-            id = it.toLong(),
+            id = 1,
             name = "name",
+            description = "",
             data = "11.01.2024", // Ссылка на фото человека
-            time = "8:45 - 10:20",
+            time = 1,
             room = 111,
-            statusForm = StatusForm.WAIT,
-            statusKey = StatusKey.NO,
+            statusForm = listOf(1,2,3,4),
+            statusKey = "StatusKey.NO",
             isKey = false
         )
     }
@@ -55,30 +56,30 @@ class FormsAdapter(private val formActionListener: FormActionListener) : Recycle
             statusKeyBtn.tag = form
 
             nameText.text = form.name
-            timeText.text = form.time
+            timeText.text = form.time.toString()
             dataText.text = form.data
             roomNumTV.text = form.room.toString()
 
 
 
-            when(form.statusForm){
-                StatusForm.WAIT -> statusFormBtn.text = "Ожидание"
-                StatusForm.DONE -> statusFormBtn.text = "Одобрено"
-                StatusForm.NO -> statusFormBtn.text = "Отклонено"
-                else -> {
-                    statusFormBtn.text = "Ошибка"
-                }
-            }
-
-            when(form.statusKey){
-                StatusKey.NO -> statusKeyBtn.text = "Ключ не в деканате"
-                StatusKey.WAIT -> statusKeyBtn.text = "Ждем подтверждения"
-                StatusKey.GET -> statusKeyBtn.text = "Получить ключ"
-                StatusKey.DONE -> statusKeyBtn.text = "Ключ получен"
-                else -> {
-                    statusKeyBtn.text = "Ошибка"
-                }
-            }
+//            when(form.statusForm){
+//                StatusForm.WAIT -> statusFormBtn.text = "Ожидание"
+//                StatusForm.DONE -> statusFormBtn.text = "Одобрено"
+//                StatusForm.NO -> statusFormBtn.text = "Отклонено"
+//                else -> {
+//                    statusFormBtn.text = "Ошибка"
+//                }
+//            }
+//
+//            when(form.statusKey){
+//                StatusKey.NO -> statusKeyBtn.text = "Ключ не в деканате"
+//                StatusKey.WAIT -> statusKeyBtn.text = "Ждем подтверждения"
+//                StatusKey.GET -> statusKeyBtn.text = "Получить ключ"
+//                StatusKey.DONE -> statusKeyBtn.text = "Ключ получен"
+//                else -> {
+//                    statusKeyBtn.text = "Ошибка"
+//                }
+//            }
 
 
 //            if(form.statusForm == StatusForm.WAIT){
