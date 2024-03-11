@@ -6,6 +6,6 @@ import retrofit2.http.Header
 import retrofit2.http.Path
 
 interface IUser {
-    @GET("api/user/{id}")
+    @GET("user/{id}")
     suspend fun getUser( @Header("Authorization") value: String, @Path("id") id: String): UserResponse
 }

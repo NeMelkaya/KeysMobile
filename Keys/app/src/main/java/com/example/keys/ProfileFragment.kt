@@ -32,13 +32,15 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
 
         lifecycleScope.launch {
 
-            val res = controller.user(
-            )
+            val res = controller.user()
 
             res.onSuccess { data ->
                 //что будет при успехе
-               binding.nameTV.text = data.userName
-                Toast.makeText(context, "tut: ${TokenStore.token}", Toast.LENGTH_SHORT).show()
+                binding.textView2.text = data.userName
+//                if(data.roles[0] != "") {
+//                    binding.textView3.text = data.roles[0]
+//                }
+                Toast.makeText(context, "tut: ${data.roles}", Toast.LENGTH_SHORT).show()
             }
             res.onFailure {
                 res.exceptionOrNull()?.printStackTrace()

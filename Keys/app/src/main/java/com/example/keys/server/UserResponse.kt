@@ -8,5 +8,6 @@ import java.time.LocalDate
 data class UserResponse(
     val userId: String,
     val userName: String,
-    val userEmail: String
+    val userEmail: String,
+    val roles: List<String>
 )
